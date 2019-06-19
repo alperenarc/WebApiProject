@@ -8,6 +8,8 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using WebApi.Entities;
 
 namespace WebApi
 {
@@ -25,6 +27,10 @@ namespace WebApi
         {
             services.AddCors();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            var connection = @"Server=mssql08.turhost.com; Initial Catalog=Api; User ID=Alperen; Password=alparc817ismail.";
+            //var connection = @"Server=(localdb)\mssqllocaldb;Database=ANEWAPI;Trusted_Connection=True;ConnectRetryCount=0";
+            services.AddDbContext<UserContext>(options => options.UseSqlServer(connection));
 
             // configure strongly typed settings objects
             var appSettingsSection = Configuration.GetSection("AppSettings");
