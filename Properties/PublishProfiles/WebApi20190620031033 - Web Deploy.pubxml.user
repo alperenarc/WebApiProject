@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAesqmmB1rpEiKDbuMySJKLwAAAAACAAAAAAAQZgAAAAEAACAAAADv4Y6OSupaPuYLINBmlzCcFXMF58/KY7jhupwMpVHkfwAAAAAOgAAAAAIAACAAAADweO2G6k6am6kHyPp/6AL9HXYkd4TjabGoI0S6LLGmyIAAAAC/g16zHyIXHGQNnVcyazLWoLYmQJA3IZ120o/1PhAgRefpWiXvZuyzD2gmJ3C2RqbipHALgeVl7j06tQz4wE8dJ5YHiUJJRD+nAinfTgcyTcyxViobQel0RBcyVWusJeCmjOaMKxPmoWf1MF2Kudt2Qa6huKPQO0YyvlGQhkfiUUAAAACWeGiCOL/i1HVKzeIqH+icQKPRRCGiDAEQ7NOxKGtFKcuvwM+OSEJtU7Cja2AuPsudYY45NvwS6cBQNFuOdegb</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Data Source=tcp:webapi20190620105120dbserver.database.windows.net,1433%3bInitial Catalog=WebApi20190620031033_db%3bUser Id=Alperen%40webapi20190620105120dbserver%3bPassword=Alparc817ismail.</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="WebApi.Entities.UserContext">
+      <Value>Data Source=tcp:webapi20190620105120dbserver.database.windows.net,1433%3bInitial Catalog=WebApi20190620031033_db%3bUser Id=Alperen%40webapi20190620105120dbserver%3bPassword=Alparc817ismail.</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

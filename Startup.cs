@@ -28,9 +28,9 @@ namespace WebApi
             services.AddCors();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            var connection = @"Server=mssql08.turhost.com; Initial Catalog=Api; User ID=Alperen; Password=alparc817ismail.";
+            //var connection = @"Server=mssql08.turhost.com; Initial Catalog=Api; User ID=Alperen; Password=alparc817ismail.";
             //var connection = @"Server=(localdb)\mssqllocaldb;Database=ANEWAPI;Trusted_Connection=True;ConnectRetryCount=0";
-            services.AddDbContext<UserContext>(options => options.UseSqlServer(connection));
+            services.AddDbContext<UserContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             // configure strongly typed settings objects
             var appSettingsSection = Configuration.GetSection("AppSettings");
